@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Elementy — Digital Product & Design</title>
+    <meta name="description" content="Elementy — Product design, engineering, and web solutions for modern teams." />
+    <style>
+        :root{
+            --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#4fd1c5; --white:#f8fafc;
+            --radius:12px; --max:1100px; font-family:Inter, system-ui, Arial, sans-serif;
+        }
+        *{box-sizing:border-box}
+        body{margin:0;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:var(--white);-webkit-font-smoothing:antialiased}
+        .wrap{max-width:var(--max);margin:36px auto;padding:24px}
+        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+        .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+        .logo svg{width:44px;height:44px}
+        nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+        .hero{display:flex;gap:28px;align-items:center;margin-top:36px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius)}
+        .hero .left{flex:1}
+        .kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.8px;text-transform:uppercase}
+        h1{margin:12px 0 8px;font-size:clamp(26px,5vw,40px);line-height:1.02}
+        p.lead{color:var(--muted);margin:0 0 18px}
+        .cta{display:inline-block;background:var(--accent);color:#042028;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+        .cta.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);margin-left:12px;padding:10px 16px}
+        .visual{width:320px;flex:0 0 320px;background:linear-gradient(135deg,#082235,#072432);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center}
+        .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+        .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
+        .card h3{margin:0 0 8px;font-size:16px}
+        .card p{margin:0;color:var(--muted);font-size:14px}
+        section{margin-top:32px}
+        .about{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+        .about p{color:var(--muted);max-width:66ch}
+        .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
+        .form{background:var(--card);padding:18px;border-radius:12px}
+        .form label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
+        .form input,.form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);resize:vertical}
+        .form button{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:#022;font-weight:700}
+        footer{margin-top:40px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+        @media (max-width:880px){
+            .hero{flex-direction:column}
+            .visual{width:100%;flex:unset}
+            .cards{grid-template-columns:1fr}
+            .contact{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <a class="logo" href="#" aria-label="Elementy home">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
+                    <rect width="48" height="48" rx="8" fill="#062533"/>
+                    <path d="M12 30L24 12l12 18H12z" fill="#4fd1c5"/>
+                </svg>
+                <div>
+                    <div style="font-weight:800">Elementy</div>
+                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Product • Design • Engineering</div>
+                </div>
+            </a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" aria-labelledby="hero-heading">
+                <div class="left">
+                    <div class="kicker">Digital craftsmanship</div>
+                    <h1 id="hero-heading">We build thoughtful digital products that scale</h1>
+                    <p class="lead">Elementy is a small team of designers and engineers focused on product strategy, UX, and frontend engineering. We ship fast, iterate often, and help teams ship better experiences.</p>
+                    <div>
+                        <a class="cta" href="#contact">Start a project</a>
+                        <a class="cta secondary" href="#services">Our services</a>
+                    </div>
+
+                    <div class="cards" style="margin-top:20px;">
+                        <div class="card">
+                            <h3>Product Strategy</h3>
+                            <p>Roadmaps, feature prioritization, and user research to align business and product goals.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Design Systems</h3>
+                            <p>Reusable UI libraries and accessible components to speed up development.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Frontend Engineering</h3>
+                            <p>Modern, maintainable web apps with performance and accessibility in mind.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visual" aria-hidden="true">
+                    <!-- simple device mockup -->
+                    <svg width="260" height="180" viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="252" height="172" rx="14" fill="#071d2a" stroke="#083043" stroke-width="2"/>
+                        <rect x="20" y="20" width="220" height="30" rx="6" fill="#042b33"/>
+                        <rect x="20" y="62" width="220" height="92" rx="8" fill="#062b33"/>
+                        <rect x="32" y="72" width="60" height="18" rx="6" fill="#4fd1c5"/>
+                        <rect x="100" y="72" width="110" height="18" rx="6" fill="#0b8790" opacity="0.15"/>
+                        <circle cx="130" cy="140" r="18" fill="#134b4f" />
+                    </svg>
+                </div>
+            </section>
+
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading" style="margin-top:24px">About Elementy</h2>
+                <div class="about">
+                    <p>We help startups and enterprise teams design and build delightful experiences. Our process blends user research, design thinking, and pragmatic engineering to deliver measurable outcomes. We believe in simplicity, performance, and clear communication.</p>
+                </div>
+            </section>
+
+            <section id="services" aria-labelledby="services-heading">
+                <h2 id="services-heading" style="margin-top:28px">Services</h2>
+                <div class="cards" style="margin-top:12px;">
+                    <div class="card"><h3>Discovery</h3><p>Workshops, user interviews, and validation sprints to discover product-market fit.</p></div>
+                    <div class="card"><h3>Design</h3><p>UX, interaction design, prototyping, and visual systems for consistent products.</p></div>
+                    <div class="card"><h3>Engineering</h3><p>Frontend-first engineering, componentization, and performance optimizations.</p></div>
+                </div>
+            </section>
+
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading" style="margin-top:28px">Get in touch</h2>
+                <div class="contact">
+                    <form class="form" action="mailto:hello@elementy.com" method="post" enctype="text/plain">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required placeholder="Your name" />
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project"></textarea>
+                        <button type="submit">Send message</button>
+                    </form>
+
+                    <aside style="padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;">
+                        <p style="margin:0 0 8px;color:var(--muted)">Prefer email?</p>
+                        <p style="margin:0 0 12px"><a href="mailto:hello@elementy.com" style="color:var(--accent);text-decoration:none">hello@elementy.com</a></p>
+                        <p style="margin:0;color:var(--muted)">Office</p>
+                        <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Remote-friendly — EU & US overlap</p>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div>© <span id="year"></span> Elementy</div>
+            <div style="display:flex;gap:12px">
+                <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
+                <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // small progressive enhancements
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html></div>
