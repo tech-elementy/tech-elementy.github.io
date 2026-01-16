@@ -1,162 +1,243 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Elementy — Digital Product & Design</title>
-    <meta name="description" content="Elementy — Product design, engineering, and web solutions for modern teams." />
+    <title>Elementy — Drukarnia, Sitodruk, Poligrafia | Gorzów Wlkp.</title>
+    <meta name="description" content="Elementy — druk, sitodruk i poligrafia w Gorzowie Wielkopolskim. Proste, estetyczne rozwiązania dla Twojej marki." />
     <style>
         :root{
-            --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#4fd1c5; --white:#f8fafc;
-            --radius:12px; --max:1100px; font-family:Inter, system-ui, Arial, sans-serif;
+            --bg:#fbfdff;
+            --card:#ffffff;
+            --muted:#6b7280;
+            --accent:#e6f6ff;
+            --primary:#2b7cff;
+            --glass: rgba(255,255,255,0.6);
+            --radius:14px;
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
         }
         *{box-sizing:border-box}
-        body{margin:0;background:linear-gradient(180deg,#071025 0%,var(--bg) 100%);color:var(--white);-webkit-font-smoothing:antialiased}
-        .wrap{max-width:var(--max);margin:36px auto;padding:24px}
-        header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-        .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-        .logo svg{width:44px;height:44px}
-        nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
-        .hero{display:flex;gap:28px;align-items:center;margin-top:36px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius)}
-        .hero .left{flex:1}
-        .kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.8px;text-transform:uppercase}
-        h1{margin:12px 0 8px;font-size:clamp(26px,5vw,40px);line-height:1.02}
-        p.lead{color:var(--muted);margin:0 0 18px}
-        .cta{display:inline-block;background:var(--accent);color:#042028;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
-        .cta.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white);margin-left:12px;padding:10px 16px}
-        .visual{width:320px;flex:0 0 320px;background:linear-gradient(135deg,#082235,#072432);border-radius:12px;padding:18px;display:flex;align-items:center;justify-content:center}
-        .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-        .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px}
-        .card h3{margin:0 0 8px;font-size:16px}
-        .card p{margin:0;color:var(--muted);font-size:14px}
-        section{margin-top:32px}
-        .about{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
-        .about p{color:var(--muted);max-width:66ch}
-        .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start}
-        .form{background:var(--card);padding:18px;border-radius:12px}
-        .form label{display:block;font-size:13px;margin:10px 0 6px;color:var(--muted)}
-        .form input,.form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--white);resize:vertical}
-        .form button{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:#022;font-weight:700}
-        footer{margin-top:40px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
-        @media (max-width:880px){
-            .hero{flex-direction:column}
-            .visual{width:100%;flex:unset}
-            .cards{grid-template-columns:1fr}
-            .contact{grid-template-columns:1fr}
+        html,body{height:100%}
+        body{
+            margin:0;
+            background: linear-gradient(180deg,var(--bg),#ffffff);
+            color:#0f172a;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px 20px;
         }
+
+        .container{
+            width:100%;
+            max-width:920px;
+            text-align:center;
+        }
+
+        .hero{
+            background:var(--card);
+            border-radius:var(--radius);
+            padding:48px 32px;
+            box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+            display:flex;
+            gap:28px;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+        }
+
+        .logo{
+            width:120px;
+            height:120px;
+            border-radius:28px;
+            display:grid;
+            place-items:center;
+            background: linear-gradient(135deg, #f0fbff 0%, #ffffff 40%);
+            box-shadow: 0 8px 30px rgba(43,124,255,0.06), inset 0 -6px 18px rgba(43,124,255,0.04);
+            margin-bottom:6px;
+        }
+        .logo svg{width:64px;height:64px;display:block}
+
+        h1{
+            margin:6px 0 0;
+            font-size:20px;
+            letter-spacing:-0.02em;
+            font-weight:600;
+        }
+        p.lead{
+            margin:8px 0 20px;
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        .actions{
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+            justify-content:center;
+            margin-top:8px;
+        }
+        .btn{
+            background:var(--accent);
+            color:var(--primary);
+            border:0;
+            padding:10px 16px;
+            border-radius:10px;
+            font-weight:600;
+            cursor:pointer;
+            text-decoration:none;
+            box-shadow:0 6px 18px rgba(43,124,255,0.06);
+            transition:transform .12s ease, box-shadow .12s;
+            display:inline-flex;
+            gap:10px;
+            align-items:center;
+            font-size:14px;
+        }
+        .btn:active{transform:translateY(1px)}
+        .btn.secondary{
+            background:transparent;
+            color:var(--muted);
+            box-shadow:none;
+            border:1px solid rgba(15,23,42,0.04);
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:14px;
+            margin-top:28px;
+            width:100%;
+        }
+        @media (max-width:760px){
+            .grid{grid-template-columns:1fr; margin-top:18px}
+            .logo{width:96px;height:96px;border-radius:16px}
+        }
+        .card{
+            background:var(--glass);
+            padding:18px;
+            border-radius:12px;
+            text-align:left;
+            backdrop-filter: blur(6px);
+        }
+        .card h3{margin:0 0 6px;font-size:15px}
+        .card p{margin:0;color:var(--muted);font-size:13px}
+
+        footer{
+            margin-top:18px;
+            color:var(--muted);
+            font-size:13px;
+        }
+
+        a.link{color:inherit;text-decoration:none}
+        .contact-list{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+        .small{font-size:13px;color:var(--muted)}
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <header>
-            <a class="logo" href="#" aria-label="Elementy home">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false">
-                    <rect width="48" height="48" rx="8" fill="#062533"/>
-                    <path d="M12 30L24 12l12 18H12z" fill="#4fd1c5"/>
+    <main class="container" role="main">
+        <section class="hero" aria-label="Elementy - strona główna">
+            <div class="logo" aria-hidden="true">
+                <!-- Minimalistyczne logo SVG: litera E + fale/druk -->
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Elementy">
+                    <rect x="0" y="0" width="64" height="64" rx="12" fill="#ffffff" />
+                    <g transform="translate(6,10)" fill="none" stroke="#2b7cff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h28" />
+                        <path d="M4 18h28" />
+                        <path d="M4 30h20" />
+                        <path d="M32 6c3 3 3 7 0 10" stroke-opacity=".12"/>
+                    </g>
                 </svg>
-                <div>
-                    <div style="font-weight:800">Elementy</div>
-                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Product • Design • Engineering</div>
-                </div>
-            </a>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-
-        <main>
-            <section class="hero" aria-labelledby="hero-heading">
-                <div class="left">
-                    <div class="kicker">Digital craftsmanship</div>
-                    <h1 id="hero-heading">We build thoughtful digital products that scale</h1>
-                    <p class="lead">Elementy is a small team of designers and engineers focused on product strategy, UX, and frontend engineering. We ship fast, iterate often, and help teams ship better experiences.</p>
-                    <div>
-                        <a class="cta" href="#contact">Start a project</a>
-                        <a class="cta secondary" href="#services">Our services</a>
-                    </div>
-
-                    <div class="cards" style="margin-top:20px;">
-                        <div class="card">
-                            <h3>Product Strategy</h3>
-                            <p>Roadmaps, feature prioritization, and user research to align business and product goals.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Design Systems</h3>
-                            <p>Reusable UI libraries and accessible components to speed up development.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Frontend Engineering</h3>
-                            <p>Modern, maintainable web apps with performance and accessibility in mind.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="visual" aria-hidden="true">
-                    <!-- simple device mockup -->
-                    <svg width="260" height="180" viewBox="0 0 260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="4" y="4" width="252" height="172" rx="14" fill="#071d2a" stroke="#083043" stroke-width="2"/>
-                        <rect x="20" y="20" width="220" height="30" rx="6" fill="#042b33"/>
-                        <rect x="20" y="62" width="220" height="92" rx="8" fill="#062b33"/>
-                        <rect x="32" y="72" width="60" height="18" rx="6" fill="#4fd1c5"/>
-                        <rect x="100" y="72" width="110" height="18" rx="6" fill="#0b8790" opacity="0.15"/>
-                        <circle cx="130" cy="140" r="18" fill="#134b4f" />
-                    </svg>
-                </div>
-            </section>
-
-            <section id="about" aria-labelledby="about-heading">
-                <h2 id="about-heading" style="margin-top:24px">About Elementy</h2>
-                <div class="about">
-                    <p>We help startups and enterprise teams design and build delightful experiences. Our process blends user research, design thinking, and pragmatic engineering to deliver measurable outcomes. We believe in simplicity, performance, and clear communication.</p>
-                </div>
-            </section>
-
-            <section id="services" aria-labelledby="services-heading">
-                <h2 id="services-heading" style="margin-top:28px">Services</h2>
-                <div class="cards" style="margin-top:12px;">
-                    <div class="card"><h3>Discovery</h3><p>Workshops, user interviews, and validation sprints to discover product-market fit.</p></div>
-                    <div class="card"><h3>Design</h3><p>UX, interaction design, prototyping, and visual systems for consistent products.</p></div>
-                    <div class="card"><h3>Engineering</h3><p>Frontend-first engineering, componentization, and performance optimizations.</p></div>
-                </div>
-            </section>
-
-            <section id="contact" aria-labelledby="contact-heading">
-                <h2 id="contact-heading" style="margin-top:28px">Get in touch</h2>
-                <div class="contact">
-                    <form class="form" action="mailto:hello@elementy.com" method="post" enctype="text/plain">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" required placeholder="Your name" />
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required placeholder="you@example.com" />
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project"></textarea>
-                        <button type="submit">Send message</button>
-                    </form>
-
-                    <aside style="padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;">
-                        <p style="margin:0 0 8px;color:var(--muted)">Prefer email?</p>
-                        <p style="margin:0 0 12px"><a href="mailto:hello@elementy.com" style="color:var(--accent);text-decoration:none">hello@elementy.com</a></p>
-                        <p style="margin:0;color:var(--muted)">Office</p>
-                        <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Remote-friendly — EU & US overlap</p>
-                    </aside>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div>© <span id="year"></span> Elementy</div>
-            <div style="display:flex;gap:12px">
-                <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
-                <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
             </div>
-        </footer>
-    </div>
 
-    <script>
-        // small progressive enhancements
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+            <h1>Elementy</h1>
+            <p class="lead">Druk, sitodruk i poligrafia — estetycznie, solidnie, lokalnie. Gorzów Wielkopolski</p>
+
+            <nav class="actions" aria-label="Szybkie akcje">
+                <a class="btn" href="#uslugi">Usługi</a>
+                <a class="btn" href="#kontakt">Kontakt</a>
+                <a class="btn secondary" href="#o-nas">O nas</a>
+            </nav>
+
+            <div class="grid" aria-hidden="false">
+                <div class="card">
+                    <h3>Druk cyfrowy</h3>
+                    <p>Wydruki małoseryjne i wielkoformatowe — ulotki, plakaty, wizytówki.</p>
+                </div>
+                <div class="card">
+                    <h3>Sitodruk</h3>
+                    <p>Koszulki, torby i nadruki na materiałach z dbałością o detale i trwałość.</p>
+                </div>
+                <div class="card">
+                    <h3>Poligrafia</h3>
+                    <p>Projektowanie i oprawa materiałów reklamowych i firmowych.</p>
+                </div>
+            </div>
+
+            <footer>
+                <div class="small">Działamy w Gorzowie Wielkopolskim — szybki kontakt i wyceny.</div>
+            </footer>
+        </section>
+
+        <section id="uslugi" style="margin-top:28px; text-align:left;">
+            <h2 style="font-size:17px;margin:0 0 10px">Usługi</h2>
+            <p class="small" style="margin:0 0 12px">Co oferujemy</p>
+            <div style="display:grid;gap:12px;grid-template-columns:repeat(2,1fr);">
+                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <strong>Druk offsetowy i cyfrowy</strong>
+                    <div class="small">Ulotki, katalogi, plakaty, wizytówki — pełna obsługa druku.</div>
+                </div>
+                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <strong>Sitodruk na tekstyliach</strong>
+                    <div class="small">Nadruki na koszulkach, torbach, materiałach reklamowych.</div>
+                </div>
+                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <strong>Oprawa i laminowanie</strong>
+                    <div class="small">Różne wykończenia: lakier, folia mat/gloss, oprawa.</div>
+                </div>
+                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <strong>Projekty graficzne</strong>
+                    <div class="small">Projekty do druku i przygotowanie gotowych plików.</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" style="margin-top:28px;text-align:left;">
+            <h2 style="font-size:17px;margin:0 0 10px">Kontakt</h2>
+            <p class="small" style="margin:0 0 12px">Skontaktuj się z nami</p>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:220px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <div style="font-weight:600">Elementy</div>
+                    <div class="contact-list">
+                        <div class="small">📍 Gorzów Wielkopolski</div>
+                        <div class="small">☎️ <a class="link" href="tel:+48600111222">+48 600 111 222</a></div>
+                        <div class="small">✉️ <a class="link" href="mailto:biuro@elementy.pl">biuro@elementy.pl</a></div>
+                        <div class="small">🕒 Pon–Pt 8:00–17:00</div>
+                    </div>
+                </div>
+
+                <div style="flex:1;min-width:220px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
+                    <div style="font-weight:600">Szybka wiadomość</div>
+                    <form action="mailto:biuro@elementy.pl" method="post" enctype="text/plain" style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+                        <input name="Imię" placeholder="Imię" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)" />
+                        <input name="Email" placeholder="Email" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)" />
+                        <textarea name="Wiadomość" rows="3" placeholder="Krótka wiadomość" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)"></textarea>
+                        <div style="display:flex;gap:8px">
+                            <button class="btn" type="submit" style="flex:1">Wyślij</button>
+                            <a class="btn secondary" href="tel:+48600111222" style="flex:1;justify-content:center">Zadzwoń</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="o-nas" style="margin-top:28px;text-align:left;">
+            <h2 style="font-size:17px;margin:0 0 10px">O nas</h2>
+            <p class="small" style="margin:0 0 12px">Jesteśmy lokalną drukarnią z doświadczeniem w druku i sitodruku. Proponujemy proste i estetyczne rozwiązania dopasowane do potrzeb małych firm i projektów indywidualnych.</p>
+        </section>
+
+    </main>
 </body>
-</html></div>
+</html></div></g></svg></main>
