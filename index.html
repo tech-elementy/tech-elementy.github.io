@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="pl">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Elementy — Drukarnia, Sitodruk, Poligrafia | Gorzów Wlkp.</title>
-    <meta name="description" content="Elementy — druk, sitodruk i poligrafia w Gorzowie Wielkopolskim. Proste, estetyczne rozwiązania dla Twojej marki." />
+    <title>Element - Drukarnia, Sitodruk, Poligrafia | Gorzów Wlkp.</title>
+    <meta name="description" content="Element — druk, sitodruk i poligrafia w Gorzowie Wielkopolskim. Proste, estetyczne rozwiązania dla Twojej marki." />
     <style>
         :root{
             --bg:#fbfdff;
             --card:#ffffff;
             --muted:#6b7280;
-            --accent:#e6f6ff;
-            --primary:#2b7cff;
+            --accent:#ffffff;
+            --primary:#000000;
             --glass: rgba(255,255,255,0.6);
             --radius:14px;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            font-family: 'Raleway', sans-serif;
+            letter-spacing: 0.65em;
+            text-transform: uppercase;
         }
         *{box-sizing:border-box}
         html,body{height:100%}
@@ -40,9 +43,8 @@
             background:var(--card);
             border-radius:var(--radius);
             padding:48px 32px;
-            box-shadow: 0 6px 18px rgba(16,24,40,0.06);
             display:flex;
-            gap:28px;
+            gap:56px;
             align-items:center;
             justify-content:center;
             flex-direction:column;
@@ -62,9 +64,8 @@
 
         h1{
             margin:6px 0 0;
-            font-size:20px;
-            letter-spacing:-0.02em;
-            font-weight:600;
+            font-size:18px;
+            font-weight:700;
         }
         p.lead{
             margin:8px 0 20px;
@@ -94,6 +95,8 @@
             gap:10px;
             align-items:center;
             font-size:14px;
+            text-transform:uppercase;
+            letter-spacing:0.2em;
         }
         .btn:active{transform:translateY(1px)}
         .btn.secondary{
@@ -136,108 +139,19 @@
     </style>
 </head>
 <body>
-    <main class="container" role="main">
-        <section class="hero" aria-label="Elementy - strona główna">
-            <div class="logo" aria-hidden="true">
-                <!-- Minimalistyczne logo SVG: litera E + fale/druk -->
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Elementy">
-                    <rect x="0" y="0" width="64" height="64" rx="12" fill="#ffffff" />
-                    <g transform="translate(6,10)" fill="none" stroke="#2b7cff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h28" />
-                        <path d="M4 18h28" />
-                        <path d="M4 30h20" />
-                        <path d="M32 6c3 3 3 7 0 10" stroke-opacity=".12"/>
-                    </g>
+    <div class="container">
+        <div class="hero">
+            <img src="img/logo.svg" alt="Element logo" style="width:auto; height:auto; max-width:none;">
+            <h1>Druk | Sitodruk | Poligrafia</h1>
+        </div>
+        <div class="actions" style="justify-content:center; margin-top:18px;">
+            <a class="btn" href="tel:+48533049905" aria-label="Zadzwoń pod numer +48 533 049 905">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.12.97.38 1.92.78 2.81a2 2 0 0 1-.45 2.11L9.91 10.09a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.89.4 1.84.66 2.81.78A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-            </div>
-
-            <h1>Elementy</h1>
-            <p class="lead">Druk, sitodruk i poligrafia — estetycznie, solidnie, lokalnie. Gorzów Wielkopolski</p>
-
-            <nav class="actions" aria-label="Szybkie akcje">
-                <a class="btn" href="#uslugi">Usługi</a>
-                <a class="btn" href="#kontakt">Kontakt</a>
-                <a class="btn secondary" href="#o-nas">O nas</a>
-            </nav>
-
-            <div class="grid" aria-hidden="false">
-                <div class="card">
-                    <h3>Druk cyfrowy</h3>
-                    <p>Wydruki małoseryjne i wielkoformatowe — ulotki, plakaty, wizytówki.</p>
-                </div>
-                <div class="card">
-                    <h3>Sitodruk</h3>
-                    <p>Koszulki, torby i nadruki na materiałach z dbałością o detale i trwałość.</p>
-                </div>
-                <div class="card">
-                    <h3>Poligrafia</h3>
-                    <p>Projektowanie i oprawa materiałów reklamowych i firmowych.</p>
-                </div>
-            </div>
-
-            <footer>
-                <div class="small">Działamy w Gorzowie Wielkopolskim — szybki kontakt i wyceny.</div>
-            </footer>
-        </section>
-
-        <section id="uslugi" style="margin-top:28px; text-align:left;">
-            <h2 style="font-size:17px;margin:0 0 10px">Usługi</h2>
-            <p class="small" style="margin:0 0 12px">Co oferujemy</p>
-            <div style="display:grid;gap:12px;grid-template-columns:repeat(2,1fr);">
-                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <strong>Druk offsetowy i cyfrowy</strong>
-                    <div class="small">Ulotki, katalogi, plakaty, wizytówki — pełna obsługa druku.</div>
-                </div>
-                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <strong>Sitodruk na tekstyliach</strong>
-                    <div class="small">Nadruki na koszulkach, torbach, materiałach reklamowych.</div>
-                </div>
-                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <strong>Oprawa i laminowanie</strong>
-                    <div class="small">Różne wykończenia: lakier, folia mat/gloss, oprawa.</div>
-                </div>
-                <div style="background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <strong>Projekty graficzne</strong>
-                    <div class="small">Projekty do druku i przygotowanie gotowych plików.</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="kontakt" style="margin-top:28px;text-align:left;">
-            <h2 style="font-size:17px;margin:0 0 10px">Kontakt</h2>
-            <p class="small" style="margin:0 0 12px">Skontaktuj się z nami</p>
-
-            <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                <div style="flex:1;min-width:220px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <div style="font-weight:600">Elementy</div>
-                    <div class="contact-list">
-                        <div class="small">📍 Gorzów Wielkopolski</div>
-                        <div class="small">☎️ <a class="link" href="tel:+48600111222">+48 600 111 222</a></div>
-                        <div class="small">✉️ <a class="link" href="mailto:biuro@elementy.pl">biuro@elementy.pl</a></div>
-                        <div class="small">🕒 Pon–Pt 8:00–17:00</div>
-                    </div>
-                </div>
-
-                <div style="flex:1;min-width:220px;background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04)">
-                    <div style="font-weight:600">Szybka wiadomość</div>
-                    <form action="mailto:biuro@elementy.pl" method="post" enctype="text/plain" style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
-                        <input name="Imię" placeholder="Imię" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)" />
-                        <input name="Email" placeholder="Email" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)" />
-                        <textarea name="Wiadomość" rows="3" placeholder="Krótka wiadomość" style="padding:8px;border-radius:8px;border:1px solid rgba(15,23,42,0.06)"></textarea>
-                        <div style="display:flex;gap:8px">
-                            <button class="btn" type="submit" style="flex:1">Wyślij</button>
-                            <a class="btn secondary" href="tel:+48600111222" style="flex:1;justify-content:center">Zadzwoń</a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section id="o-nas" style="margin-top:28px;text-align:left;">
-            <h2 style="font-size:17px;margin:0 0 10px">O nas</h2>
-            <p class="small" style="margin:0 0 12px">Jesteśmy lokalną drukarnią z doświadczeniem w druku i sitodruku. Proponujemy proste i estetyczne rozwiązania dopasowane do potrzeb małych firm i projektów indywidualnych.</p>
-        </section>
-
-    </main>
+                Kontakt
+            </a>
+        </div>
+    </div>
 </body>
 </html></div></g></svg></main>
